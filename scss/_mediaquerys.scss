@@ -1,0 +1,146 @@
+@media (max-width:1400px) { 
+
+}
+@media (max-width: 1200px ){
+    
+    #headerportada h1{ 
+        padding-top: 9px;
+        font-size: 8em;  
+        letter-spacing: 9px;
+    }
+    .imagenesdeportada img { 
+        width: 300px;
+        height: 400px;
+        padding-top: 5%;
+        align-items: center;
+    }
+}
+@media (max-width: 1000px){
+    #headerportada h1{ 
+        padding-top: 9px;
+        font-size: 5em;  
+        letter-spacing: 9px;
+    }
+    .logofooter img{ 
+        width: 200px;
+        height: 200px;
+    }
+    .logowhatsapp img { 
+        width: 70px;
+        height: 70px;
+    }
+
+    #comocomprar div ol { 
+        margin: 16px;
+        font-size: 15px;
+   }
+   #piedpag { 
+       margin: 16px;
+       font-size: 20px;
+   }
+}
+@media  (max-width: 800px){
+    main { 
+        width: 100vw;
+        height: auto;
+    }
+    .imagenesdeportada{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .imagenesdeportada img { 
+        width: 280px;
+        height: 350px;
+    }
+
+
+}
+@media (max-width: 600px ){ 
+    #headerportada h1{ 
+        padding-top: 9px;
+        font-size: 4em;  
+        letter-spacing: 6px;
+    }
+    .contenedormenu ul {
+        font-size: 10px;
+    }
+    footer { 
+        width: 100%;
+        height: auto;
+    }
+    .logofooter img{ 
+        width: 150px;
+        height: 150px;
+    }
+    .contenedorfooter  h3 {
+        font-size: 1.2em;  
+    }
+    .contenedorfooter .contenedor-columna{ 
+        font-size: 1em;
+        line-height: 2rem;
+    }
+    #titulo{ 
+        font-size: 20px;
+    }
+    .caja img{
+        width: 180px;
+        height: 180px;
+    }
+    .caja p { 
+        font-size: 10px;
+        line-height: 1.5;
+    }
+    h3 {
+        font-size: 1.5em;
+        
+    }
+}
+@media (max-width: 400px ){ 
+    #headerportada h1{ 
+        padding-top: 9px;
+        font-size: 1em;  
+        letter-spacing: 6px;
+    }
+    .contenedormenu ul {
+        font-size: 8px;
+    }
+    footer { 
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+    .logofooter img{ 
+        width: 100px;
+        height: 100px;
+    }
+    .contenedorfooter  h3 {
+        font-size: 1em;  
+    }
+    .contenedorfooter .contenedor-columna{ 
+        font-size: .8em;
+        line-height: 1rem;
+    }
+    .contenedorfooter  h3 {
+        font-size: 1em;  
+    }
+    .contenedorfooter .contenedor-columna{ 
+        font-size: 1em;
+        line-height: 2rem;
+    }
+    #titulo{ 
+        font-size: 10px;
+    }
+    .caja img{
+        width: 120px;
+        height: 120px;
+    }
+    .caja p { 
+        font-size: 10px;
+        line-height: 1.5;
+    }
+    h3 {
+        font-size: 1em;
+        
+    }

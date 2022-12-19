@@ -1,0 +1,95 @@
+header {
+    width: 100vw;
+    background-color: whitesmoke;
+    height: auto;
+   
+    padding: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    #contenedorenvios p{
+    width: 100vw;
+    background-color: white;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #5B5B5B;  
+    }
+    #headerportada h1{ 
+    padding-top: 10px;
+    font-size: 9em;
+    color: #5B5B5B;
+    background-color: whitesmoke;  
+    letter-spacing: 15px;
+    text-align: center;
+    }
+    .contenedormenu {    
+        ul {
+        background-color: whitesmoke;
+        display: flex;
+        justify-content: space-around; 
+        list-style: none;
+        text-align: center;
+        font-size: 15px;
+        line-height: 0;
+        margin: 0;
+        box-sizing: border-box;
+        transition: all .35s ease;
+             
+             li {
+             display: inline-block;
+             list-style: outside none none;
+             margin: .5em 1em;
+             padding: 0;
+
+                 a{
+                 background-color: whitesmoke;
+                 color: #5B5B5B;
+                 line-height: 5;
+                 padding: .5em .8em; 
+                 position: relative;
+                 text-decoration: none;
+                  &::before,
+                  &::after{
+                    content: '';
+                    height: 14px;
+                    width: 14px;
+                    position: absolute;
+                    transition: all .35s ease;
+                    opacity: 0;
+                  }
+                  &::before {
+                    content: '';
+                    right: 0;
+                    top: 0;
+                    border-top: 3px solid #807f7fcb;
+                    border-right: 3px solid #807f7fcb;
+                    transform: translate(-100%, 50%); 
+                  }
+                  &::after {
+                    content: '';
+                    left: 0;
+                    bottom: 0;
+                    border-bottom: 3px solid #807f7fcb;
+                    border-left: 3px solid #807f7fcb;
+                    transform: translate(100%, -50%)
+                  }
+                  & :hover ::before
+                  & :hover ::after{
+                    transform: translate(0,0);
+                    opacity: 1;
+                  }
+                  & :hover{
+                    color: #807f7fcb;
+                  }
+                 }
+                }
+            }
+        }
+    }
+
+
+
+            

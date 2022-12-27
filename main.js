@@ -1,37 +1,4 @@
-//PREENTREGA1
-//promociones de black friday - calculadora de descuento 
-
-/* let productoDescuento, precioFinal; 
-let producto = parseFloat(prompt("Ingresa el precio del producto"));
-
-if (producto>0 && producto<1000){ 
-
-   productoDescuento = (producto * 0.05)  ;
-   precioFinal = (producto - productoDescuento);
-   alert (`El precio del producto con el descuento realizado del 5% es ${precioFinal}`);
-
-}else if (producto > 1000 && producto <= 2500){
-
-    console.log ( productoDescuento = (producto * 0.15) );
-    precioFinal = (producto - productoDescuento);
-   alert (`El precio del producto con el descuento realizado del 15% es ${ precioFinal }`);
-
-}else if (producto > 2500 ) {
-
-    console.log ( productoDescuento = (producto * 0.25) );
-    precioFinal = (producto - productoDescuento);
-    alert (`El precio del producto con el descuento realizado del 25% es ${ precioFinal } `);
-
-}else{ 
-
-    alert ("Error ingrese un precio correcto del producto que quiere calcular su descuento"); 
-}
- */
-
-
-//****************************************************************************************************** */
-
-//PREENTREGA2 
+//PREENTREGA3 
 //carrito de compras de productos en oferta 
 
 const productos = [
@@ -39,8 +6,8 @@ const productos = [
     {nombre:"Pulseras de Plata", precio: 2250},
     {nombre:"Aros de Plata", precio: 1050},
     {nombre:"Gargantillas de Plata", precio: 4000},
-    {nombre:"Dijes de Plata", precio: 950}
-    {nombre:"bijou", precio: 550}
+    {nombre:"Dijes de Plata", precio: 950},
+    {nombre:"bijou", precio: 550},
 ]
 
 let carrito = []
@@ -162,5 +129,5 @@ while (terminarCompra !== "no" || terminarCompra !== "si") {
   }
 }
 
-
+/**----------------------COMPRA REALIZADA-------------- */ 
   

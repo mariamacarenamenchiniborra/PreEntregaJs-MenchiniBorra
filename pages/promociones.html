@@ -43,7 +43,7 @@
                  
                 <li><a href="./contacto.html">CONTACTO</a></li>
 
-                <li><a href="./promociones.html">PROMOCIONES</a></li>
+                <li><a href="./promociones.html">PEDIDOS</a></li>
                
                 </ul> 
 
@@ -52,9 +52,36 @@
     </header>
 
     <main>
-    
-     <h3 class= "animate__animated animate__infinite animate__bounce animate__delay-1s" >BLACK FRIDAY</h3>
      
+     <!-- <h3 class= "animate__animated animate__infinite animate__bounce animate__delay-1s" >BLACK FRIDAY</h3> -->
+    
+     
+    <h1>Sistema de busqueda de compra realiza: </h1>
+    
+    <form id="formulario">
+      
+      <label for="nombre">Nombre del Cliente: </label>
+      <input id="nombre" type="text" />
+      <br /><br />
+
+      <label for="apellido">Apellido del Cliente</label>
+      <input id="apellido" type="text" />
+      <br /><br />
+
+      <label for="pedido">Número de Pedido</label>
+      <input id="pedido" type="text" />
+      <br /><br />
+
+    
+
+    </form>
+
+    <h2>Ver Pedidos Vigentes:</h2>
+    <br /><br />
+    <button id="verPedidos">VER PEDIDOS </button>
+    <div id="contenedorPedidos"></div>
+
+
     </main>
     
        

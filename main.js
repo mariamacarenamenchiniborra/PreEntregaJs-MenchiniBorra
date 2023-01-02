@@ -1,4 +1,5 @@
-//PREENTREGA3 
+/* //PREENTREGA2
+
 //carrito de compras de productos en oferta 
 
 const productos = [
@@ -19,7 +20,7 @@ let altura = "";
 let contacto = 0;
 
 /*------------ DATOS DEL COMPRADOR ------------*/
-
+/*
 function ingresoDeDatos() {
     nombre += prompt("Ingrese su nombre");
     apellido += prompt("ingrese su apellido");
@@ -43,7 +44,7 @@ while (seleccionDatos != "si" && seleccionDatos != "no") {
 }
 
 /*------------ COMPRA ------------*/
-
+/*
 if (seleccionDatos === "si") {
     alert("A continuacion nuestros productos disponibles.\nSelecciona cual o cuales productos queres de la siguiente lista:");
     
@@ -53,7 +54,7 @@ if (seleccionDatos === "si") {
     alert("gracias, hasta la proxima!");
 }
   
- /*------------ AGREGAR PRODUCTO ------------*/
+ /*------------ AGREGAR PRODUCTO ------------*//*
 function comprar() {
   
     let id = "";
@@ -97,7 +98,7 @@ function comprar() {
     }
 
 
- /*------------ RESUMEN DE COMPRA ------------*/
+ /*------------ RESUMEN DE COMPRA ------------*//*
 
  let compra = carrito.map((e) => e.id + " - " + "$" + e.precio * e.cantidad);
 
@@ -109,7 +110,7 @@ function comprar() {
 
 }
 
-/*------------ COMPRA ------------*/
+/*------------ COMPRA ------------*//*
 
 comprar();
 
@@ -129,5 +130,83 @@ while (terminarCompra !== "no" || terminarCompra !== "si") {
   }
 }
 
-/**----------------------COMPRA REALIZADA-------------- */ 
+/**----------------------COMPRA REALIZADA------------*/ 
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+/*PREENTREGA3*/ 
+
+//SISTEMA DE SEGUIMIENTO DE COMPRA REALIZADA:
+
+class COMPRA {
+  constructor(nombreCliente, apellidoCliente, numeroPedido, habitacion) {
+    this.nombreCliente = nombreCliente;
+    this.apellidoCliente = apellidoCliente;
+    this.numeroPedido = numeroPedido;
+    this.habitacion = habitacion;
+  }
+}
+
+const pedido = [];
+
+/*****************************/
+
+//Si el LocalStorage tiene datos, los agrego al Array de Pedidos.
+
+if (localStorage.getItem('pedido')) {
+  let pedido = JSON.parse(localStorage.getItem('pedido'));
   
+  /* pedido.push(...pedido); */
+  for (let i = 0; i < pedido.length; i++) {
+
+    pedido.push(pedido[i]);
+  }
+}
+
+/*****************************/
+
+const formulario = document.getElementById('formulario');
+
+formulario.addEventListener('submit', (e) => {
+  e.preventDefault();
+  agregarPedido();
+});
+
+function agregarPedido() {
+  const nombre = document.getElementById('nombre').value;
+  const apellido = document.getElementById('apellido').value;
+  const pedido = document.getElementById('pedido').value;
+  const habitacion = document.getElementById('habitacion').value;
+  const nuevoPedido = new pedido(nombre, apellido, pedido, habitacion);
+  reservas.push(nuevoPedido);
+
+  //Agrego al LocalStorage:
+  localStorage.setItem('pedido', JSON.stringify(pedido));
+  formulario.reset();
+}
+
+const contenedorPedido = document.getElementById('contenedorPedido');
+
+const verPedido = document.getElementById('verPedido');
+
+verPedido.addEventListener('click', () => {
+  mostrarPedido();
+});
+
+function mostrarPedido() {
+  contenedorPedido.innerHTML = '';
+  pedido.forEach((pedido) => {
+    const div = document.createElement('div');
+    div.innerHTML = `
+                      <div>
+                          <p>Nombre del Cliente: ${pedido.nombreCliente}</p>
+                          <p>Apellido del Cliente: ${pedido.apellidoCliente}</p>
+                          <p>Número Pedido: ${pedido.numeroReserva}</p>
+                          <p>Habitación: ${pedido.habitacion}</p>
+                      </div>
+      
+                      `;
+    contenedorPedido.appendChild(div);
+  });
+}
